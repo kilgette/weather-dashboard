@@ -14,9 +14,6 @@
 
 <body>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
-  <script src="./script.js"></script>
   <header>
     <title>Weather Dashboard</title>
   </header>
@@ -28,8 +25,22 @@
       <input type="submit" id="submit-button" value="Search" />
     </form>
 
-     
-  <h3>5-Day Forecast:</h3>
+  <div class="searchesContainer">
+    <div class="searches"></div>
+    </div>
+
+  <div class="todayContainer">
+    <div class="today"></div>
+    </div>
+
+  <div class="fiveContainer">
+    <div class="fiveDay"><h3></h3>5-Day Forecast:</h3></div>
+    </div>
+ 
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+  <script src="./script.js"></script>
     
 
 

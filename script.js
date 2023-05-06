@@ -1,52 +1,61 @@
 const button = $("#submit-button");
+const APIkey = "279df7938b24538a3425a8db10b868c0"
 let cityName = "Minneapolis";
 cityHistory = JSON.parse(localStorage.getItem("cities"));
 if (cityHistory === null) {
   cityHistory = [];
 }
 
+// button.on('click', searchCity())
 button.on("click", function (event) {
   event.preventDefault();
   searchCity();
 });
-// button.on('click', searchCity())
 
-start();
 
-function start() {
-  weather();
-  listCities();
-}
-
-function searchCity() {
- 
-}
-
+//List previously searched cities
 function historySearch(event) {
   cityName = event.target.textContent;
   weather();
 }
 
-//List previously searched cities
-
-//Get lat and long data 
-
-//Retrieve weather data
-.then(function (data) {
-  fetch(
-    `https://api.openweathermap.org/data/2.5/forecast?lat=${data[0].lat}&lon=${data[0].lon}&appid=279df7938b24538a3425a8db10b868c0`
-  )
+//Geocoding API
+fetch(
+  'https://api.openweathermap.org/data/2.5/forecast?lat=57&lon=-2.15&appid={279df7938b24538a3425a8db10b868c0}&units=imperial'
     .then((response) => response.json())
     .then(function (data) {
       startWeather();
 
- 
-//Grab weather data for the next 5 days
-function retrieveWeather() {
-           
+//Grab weather data for next 5 days
+function retrieveWeather() {          
 }
-//Display the weather data on the page
-  function displayWeather(weatherData) {
+
+//Display current weather data on the page
+function displayWeather(weatherData) {
   let city = data.city.name;
   console.log(weatherData);
   }
+
+//Get lat and long data     
+fetch(
+  api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid={APIkey}&units=imperial
+    )
+
+  // info needed from call
+  // list.main.temp
+  // list.main.temp_min
+  // list.main.temp_max
+  // list.main.humidity
+  // "main":{
+  //   "temp":306.15, //current temperature
+  //   "humidity":44,
+  //   "temp_min":306, //min current temperature in the city
+  //   "temp_max":306 //max current temperature in the city
+  // },
+  // list.wind.speed
+  // list.weather
+  // city.name
+
+}
+
+
