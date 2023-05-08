@@ -13,7 +13,7 @@ button.on("click", function (event) {
 });
 
 
-//List previously searched cities
+//List & Store previously searched cities
 function historySearch(event) {
   cityName = event.target.textContent;
   weather();
