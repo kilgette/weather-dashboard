@@ -2,16 +2,20 @@ const button = $("#submit-button");
 const APIkey = "279df7938b24538a3425a8db10b868c0"
 let cityName = $("#search-bar");
 let todayWeather=$(".today");
-cityHistory = JSON.parse(localStorage.getItem("cities"));
+let cityHistory = JSON.parse(localStorage.getItem("cities"));
 if (cityHistory === null) {
   cityHistory = [];
 }
+console.log(cityHistory)
 
 // button.on('click', searchCity())
 button.on("click", function (event) {
   event.preventDefault();
   retrieveWeather(cityName.val());
+  cityHistory.push(cityName.val());
+  localStorage.setItem('cities',JSON.stringify(cityHistory))
 });
+
 
 
 //List & Store previously searched cities
@@ -44,14 +48,20 @@ function retrieveWeather(cityName) {
     })
 }
 
+//Display weather for the next 5 days
+function displayWeather(weatherData) {
+let city = data.city.name;
+
+}
+
 //Display current weather data on the page
 function displayWeather(weatherData) {
   let city = data.city.name;
   console.log(weatherData);
 }
 
-//Store past searches in local directory 
-localStorage.setItem("","");
+// //Store past searches in local directory 
+// localStorage.setItem("cityHistory","placeholder");
 
 
 

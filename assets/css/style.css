@@ -19,3 +19,19 @@ color: gray;
   width: 30%;
   margin: 5px;
 }
+main{
+  display: flex;
+}
+
+section{
+  background-color: blue; 
+  padding: 40px;
+  width: 250px;
+}
+
+.todayContainer{
+  padding: 40px;
+  background-color: blueviolet;
+  width: 100%;
+
+}

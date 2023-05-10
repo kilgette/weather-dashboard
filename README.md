@@ -95,7 +95,6 @@ You are required to submit BOTH of the following for review:
 * The URL of the functional, deployed application.
 
 * The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
-ChatGPT
 To complete this project, you can follow these steps:
 
 Familiarize yourself with the OpenWeatherMap API documentation and sign up for an API key. Make sure you understand how to make requests to the API and what data it returns.
