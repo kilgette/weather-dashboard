@@ -1,0 +1,21 @@
+h1,
+h2 {
+  text-align: center;
+}
+
+header {
+border-style: solid;
+color: gray;
+}
+
+#search-bar {
+  align-items: flex-start;
+  width:30%;
+  margin: 5px;
+}
+
+#submit-button {
+  align-items: flex-start;
+  width: 30%;
+  margin: 5px;
+}
